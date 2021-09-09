@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("eduford_img/eduford_img/about.jpg"); 
+    /* combines red, green, blue,alpha for background*/
+    background-position: center;
+    background-size: cover;
+    position: relative;
+ 
+}
+nav{
+    display:flex;
+    padding: 2% 6%;
+    justify-content:space-between;
+    align-items:center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block; /* It will show horizontally.*/
+    padding: 8px 12px;
+    position: relative;
+ 
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background:rgb(250, 6, 6);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    
+   
+}
+#text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-weight: 5;
+}
+#text-box h1{
+    font-size: 49px;
+    
+}
+#text-box p{
+    margin: 10px 0 40px;  /* 10px from top 0 from left and right 40px from the bottom*/
+    font-size: 17px;
+    color: #fff;
+}
+#text-box p1{
+   
+    
+    padding: 10px;
+    margin: 10px 0 40px;
+    font-size: 16px;
+    color:#fff;
+   
+}
+.hero-btn{
+    text-decoration: none;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 1%;
+    color: rgb(7, 7, 7);
+    /* background: linear-gradient( rgb(167, 160, 233),rgb(5, 5, 5)); */
+    background: rgba(34, 34, 37, 0.75);
+    
+    /* box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75 ); */
+
+}
+

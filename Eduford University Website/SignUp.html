@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>Registration page </title>
+        <link rel="stylesheet" href="SignUp.css">
+ 
+    </head>
+    <body>
+        
+        <div class="bg-img">
+            <p><img src="eduford_img/eduford_img/logo.png"></p>
+            <div class="content">
+               <!-- <p><img src="logo.png"></p>-->
+                <header>Create your account on Eduford</header>
+                <form action="eduford.html"> 
+                    <div class="field">
+                        <span ></span>
+                        <input type="text" required placeholder="Full Name"> <!--//placeholder used to show 'what to write here' inside the input box-->
+                    </div>
+ 
+                    <div class="field space">
+                        <span ></span>
+                        <input type="email" id='email' required placeholder="Email "> <!--//placeholder used to show 'what to write here' inside the input box-->
+                    </div>
+ <!--Email or Phone-->
+                    <div class="field space">
+                        <span ></span>
+                        <input type="password" required id="pas1" placeholder="Password"> <!--//placeholder used to show 'what to write here' inside the input box-->
+                    </div>
+                    
+ 
+                    <div class="field space">
+                        <span ></span>
+                        <input type="password" required id="pas2"  placeholder="Confirm Password"> <!--//placeholder used to show 'what to write here' inside the input box-->
+                    </div>
+
+                    <div class="field space">
+                        <span ></span>
+                        <!-- <input type="" required id="pas2"  placeholder="Select a course"> -->
+                        <select style="width: 100%;  font-size: 18px;" id="select">
+                            <option>Select a course</option>
+                            <option >Intermediate</option>
+                            <option>Post Graduation</option>
+                            <option>Degree</option>
+                        </select> <!--//placeholder used to show 'what to write here' inside the input box-->
+                    </div>
+ 
+                    <div class="field space">
+                        <input type="button"  class="button" value="Check the credentials" onclick="check()">
+                    </div>
+
+
+
+
+                     <!--Submit-->
+                     <br>
+ 
+                     <div id="submit" class="submit" hidden=true class="field space" >
+  
+                         <input  type="submit" value="REGISTER">
+  
+                     </div>
+                    <!--Submit-->
+                    <!-- <div class="field space" >
+                        <input type="submit" value="REGISTER">
+                    </div> -->
+
+
+
+
+
+                    <!--
+                    <div class="login">Or login with</div>
+                    <div class="link">
+                        <div class="facebook">
+                            <a href="">  <img src="facebook.jfif" width="80" height="60"> </a>
+                          
+                        </div>
+                        <div class="instagram">
+                            <a href="">  <img src="instagram.jfif" width="80" height="60" > </a>
+                        </div>
+                    </div> -->
+<!--  
+                    <div class="login"> Already have an account?
+                        <a href="login.html">Login Now</a>
+                    </div>                -->
+                </form>
+            </div>
+        </div> 
+        <script>
+ 
+            function check(){
+
+            var a1 =document.getElementById("pas1").value
+
+            var a2 =document.getElementById("pas2").value
+             var a3 = document.getElementById('email').value
+            if (a1 != a2 || a1==null ||a1=="" ||a2==""|| a2==null){
+
+                alert("Please check all the credentials")
+
+            }
+            
+            else if(a1.length<4 || a2.lenght<4 || a3.includes('@')==false ){
+                alert('Either email or password has not been filled as per the conditions\nPlease Check:\nEmail has @ symbol\nPassword length is greater than or equal to 4.')
+            }
+            else  {
+            submit = document.getElementById('submit');
+            submit.hidden = false;
+             document.getElementsByClassName('submit').hidden = false
+                alert("All the credentials are correct. Please click on Register")
+               
+            }
+
+         }
+
+    
+
+        </script>
+    </body>
+</html>
+
